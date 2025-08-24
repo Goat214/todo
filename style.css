@@ -1,0 +1,239 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./src/fonts/josefin-sans-v33-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./src/fonts/josefin-sans-v33-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #171823;
+ color: #C8CBE7;
+  font-family: "Josefin Sans";
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  display: flex;
+  object-fit: cover;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  height: 300px;
+  width: 100%;
+  background-image: url("./src/assets/Bitmap.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  margin-top: 70px;
+  color: #fff;
+  font-family: "Josefin Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 15px;
+}
+.header__btn {
+  margin-top: 70px;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.main__container {
+  margin-top: -150px;
+}
+.todo__input {
+  width: 540px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #25273d;
+  box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+  color: #c8cbe7;
+  border: none;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.form__wrapper {
+  width: 540px;
+  border-radius: 5px;
+  background: #25273d;
+  box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  padding-top: 21px;
+  padding-left: 24px;
+  padding-bottom: 19px;
+  padding-right: 24px;
+
+  border-bottom: 1px solid #393a4b;
+}
+
+.todo__goal {
+  color: #c8cbe7;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}
+
+.todo__checkbox {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+
+.todo__delete {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 24px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #393a4b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: url("./src/assets/Group\ 4.svg");
+
+  margin-top: 4px;
+}
+
+
+
+.todo__control {
+  display: flex;
+  padding: 16px 24px 16px 24px;
+  justify-content: space-between;
+}
+.todo__length {
+  color: #5b5e7e;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.194px;
+}
+.btns {
+  display: inline-flex;
+  padding-bottom: 4px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 19px;
+}
+
+.btn {
+  color: #5b5e7e;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  font-style: normal;
+
+  line-height: normal;
+  letter-spacing: -0.194px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.todo__btn {
+  font-weight: 700;
+}
+
+#active {
+  color: #3a7cfd;
+}
+.clear__btn {
+  font-weight: 400;
+}
+
+footer {
+  p {
+    color: #5b5e7e;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.194px;
+    margin-bottom: 52px;
+  }
+}
