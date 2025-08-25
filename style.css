@@ -237,3 +237,73 @@ footer {
     margin-bottom: 52px;
   }
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    letter-spacing: 10px;
+  }
+
+  .header {
+    height: 220px;
+  }
+
+  .main__container {
+    margin-top: -100px;
+  }
+
+  .todo__input,
+  .form__wrapper {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .todo__goal {
+    font-size: 16px;
+  }
+
+  .btns {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+    letter-spacing: 6px;
+  }
+
+  .header {
+    height: 180px;
+  }
+
+  .main__container {
+    margin-top: -80px;
+  }
+
+  .todo__input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .todo__goal {
+    font-size: 14px;
+  }
+
+  .todo__control {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btns {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
